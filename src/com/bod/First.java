@@ -6,11 +6,10 @@ import java.util.List;
 public class First {
     public static void main(String[] args) {
         String[] names = {"01. Dmytro",
-                          "02. Stepan",
-                          "03. Bohdan",
-                          "04. Daria",
-                          "447. Nikita"};
-
+                "02. Stepan",
+                "03. Bohdan",
+                "04. Daria",
+                "447. Nikita"};
 
 
         List<String> namesList = Arrays.asList(names);
