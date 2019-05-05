@@ -1,9 +1,6 @@
 package com.bod;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Sixth {
@@ -18,14 +15,17 @@ public class Sixth {
         queues.offer(queue1);
         queues.offer(queue2);
 
+        List<String>resultList = new ArrayList<>();
+
         while (!queue1.isEmpty()) {
-            List<String>resultList = queues
+            List<String> temp = queues
                     .parallelStream()
                     .map(Queue::poll)
                     .collect(Collectors.toList());
-
-            resultList.forEach(System.out::println);
+            resultList.addAll(temp);
         }
+
+        resultList.forEach(System.out::println);
 
     }
 }
